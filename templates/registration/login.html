@@ -1,0 +1,60 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}Connexion - Planificateur de Voyage{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <h2>Connexion à Votre Compte</h2>
+
+    {% if form.errors and not form.non_field_errors %}
+    {# Ce message s'affiche si les identifiants sont incorrects #}
+    <div class="messages"><li class="error">Nom d'utilisateur ou mot de passe incorrect. Veuillez réessayer.</li></div>
+    {% endif %}
+    
+    {% comment %} Affichage des erreurs non liées à un champ spécifique (rare pour le login) {% endcomment %}
+    {% if form.non_field_errors %}
+        <div class="messages">
+        {% for error in form.non_field_errors %}
+            <li class="error">{{ error }}</li>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if next and not user.is_authenticated %}
+        <div class="messages"><li class="info">Veuillez vous connecter pour accéder à la page demandée.</li></div>
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}" class="styled-form">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            {{ form.username.label_tag }}
+            {{ form.username }} {# Le widget par défaut inclura déjà class="form-control" si Django-Bootstrap ou équivalent est utilisé, sinon ajoutez-le #}
+            {% if form.username.errors %}
+                <ul class="errorlist field-errors">
+                {% for error in form.username.errors %}<li>{{error}}</li>{% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+            {% if form.password.errors %}
+                <ul class="errorlist field-errors">
+                {% for error in form.password.errors %}<li>{{error}}</li>{% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width:100%;">Se connecter</button>
+        <input type="hidden" name="next" value="{{ next|default_if_none:'' }}">
+    </form>
+
+    <p class="auth-links">
+        <a href="{% url 'password_reset' %}">Mot de passe oublié ?</a><br>
+        Pas encore de compte ? <a href="{% url 'planner:signup' %}">Inscrivez-vous ici !</a>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title|default:"Découvrez nos Aventures - Planificateur Maroc" }}{% endblock %}
+
+{% block extra_head %}
+<style>
+    .showcase-hero-banner {
+        /* REMPLACEZ CETTE URL PAR UNE IMAGE DU MAROC DE HAUTE QUALITÉ ! */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503652601488-f36426080818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center 70%;
+        color: var(--white-pure);
+        text-align: center;
+        position: relative;
+        padding: clamp(4em, 15vh, 8em) 20px;
+        min-height: 70vh; /* Ajustez pour la hauteur désirée */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+        margin-bottom: -4em; /* Important pour le chevauchement */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <header class="showcase-hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Votre Aventure Marocaine Commence Ici</h1>
+            <p class="hero-subtitle">Découvrez des trésors cachés et planifiez le voyage de vos rêves, fait sur mesure pour vous.</p>
+            <a href="{% url 'planner:plan_trip' %}" class="btn btn-cta">✨ Planifier Mon Voyage !</a>
+        </div>
+    </header>
+
+    <div class="home-showcase-wrapper">
+    <div class="container"> {# Le .container est à l'intérieur du wrapper pour cette page spécifique #}
+        <main class="content-showcase">
+            <h2 class="section-title"><span>Aperçu de Nos Aventures</span></h2>
+
+            {% if showcase_activities_by_city %}
+                {% for city_data_entry in showcase_activities_by_city.items %}
+                {# S'assurer que city_name est bien ce que vous voulez afficher #}
+                {% with city_name=city_data_entry.0 activities=city_data_entry.1 %}
+                    <section class="city-showcase">
+                        <h3>Explorez <span>{{ city_name }}</span></h3>
+                        <div class="activities-grid">
+                            {% for activity in activities %}
+                                <div class="activity-card">
+                                    <div class="activity-card-image-wrapper">
+                                        {% if activity.image_url %}
+                                            {% if activity.image_url|slice:":4" == "http" %}
+                                                <img src="{{ activity.image_url }}" alt="Image pour {{ activity.nom|default:'Activité' }}">
+                                            {% else %}
+                                                <img src="{% static activity.image_url %}" alt="Image pour {{ activity.nom|default:'Activité' }}">
+                                            {% endif %}
+                                        {% else %}
+                                            <img src="https://via.placeholder.com/350x220.png?text={{ activity.nom|default:'Image Indisponible'|urlencode }}" alt="Image par défaut pour {{ activity.nom|default:'Activité' }}">
+                                        {% endif %}
+                                    </div>
+                                    <div class="activity-card-content">
+                                        <div>
+                                            <h4>{{ activity.nom|default:"Nom de l'activité" }}</h4>
+                                            <p class="description">{{ activity.description|truncatewords_html:20|default:"Découvrez cette magnifique activité et plongez au coeur de la culture locale." }}</p>
+                                        </div>
+                                        <div class="activity-card-footer">
+                                            <span class="activity-type-badge">{{ activity.type|default:"Aventure" }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                {% endwith %}
+                {% empty %}
+                    <p class="no-activities">Aucune activité à afficher pour le moment. Revenez explorer nos suggestions bientôt !</p>
+                {% endfor %}
+            {% else %}
+                <p class="no-activities">Nos suggestions d'aventures seront bientôt disponibles. Préparez-vous à être émerveillé par la richesse du Maroc !</p>
+            {% endif %}
+        </main>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}Planifier Votre Voyage - Maroc{% endblock %}
+
+{% block content %}
+    <div class="plan-trip-layout">
+        <aside class="plan-trip-sidebar">
+            <h2>Vos Préférences</h2>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% if field.help_text %}
+                            <small class="form-help-text">{{ field.help_text|safe }}</small>
+                        {% endif %}
+                        {% if field.errors %}
+                            <ul class="errorlist field-errors">
+                            {% for error in field.errors %}<li>{{ error }}</li>{% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-cta" style="width:100%;">✨ Planifier Mon Aventure !</button>
+            </form>
+
+            {% if trip_plan_result %}
+                {% if user.is_authenticated %}
+                     <p class="form-info-message" style="color: var(--emerald-green); margin-top:15px; font-size:0.9em; font-weight:500; text-align:center;">
+                        Ce voyage sera sauvegardé dans "Mes Voyages".
+                     </p>
+                {% else %}
+                     <p class="form-info-message" style="margin-top:15px; font-size:0.9em; text-align:center;">
+                         <a href="{% url 'login' %}?next={{ request.get_full_path|urlencode }}" style="color:var(--terracotta-ocre); font-weight:bold;">Connectez-vous</a> ou
+                         <a href="{% url 'planner:signup' %}" style="color:var(--terracotta-ocre); font-weight:bold;">inscrivez-vous</a><br>pour sauvegarder ce voyage.
+                     </p>
+                {% endif %}
+                <hr style="margin: 25px 0;">
+                <a href="{% url 'planner:download_pdf' %}" class="btn btn-secondary" style="width: 100%; box-sizing: border-box;">
+                    📥 Télécharger le Plan PDF
+                </a>
+            {% endif %}
+        </aside>
+
+        <main class="plan-trip-main">
+            {% if trip_plan_result %}
+                <h2 class="section-title" style="margin-bottom:1.5em;"><span>🎉 Votre Plan de Voyage Personnalisé</span></h2>
+
+                {% if folium_map_html %}
+                    <h3>🗺️ Carte de Votre Itinéraire</h3>
+                    <div class="map-container">
+                        {{ folium_map_html|safe }}
+                    </div>
+                    <hr class="section-divider">
+                {% endif %}
+
+                <h3>📋 Récapitulatif de Votre Demande :</h3>
+                <details class="trip-summary-details" open>
+                    <summary>Voir le récapitulatif</summary>
+                    <div class="details-content">
+                        <ul>
+                        {% for key, value in trip_params.items %}
+                            {% if key != "error" and value %}
+                            <li><strong>{{ key|capfirst }}:</strong> {{ value }}</li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </details>
+                <hr class="section-divider">
+
+                {% for city_plan in trip_plan_result %}
+                    {% if city_plan.jours_alloues > 0 %}
+                        <h3 class="city-plan-title">📍 {{ city_plan.ville|default:"Ville Inconnue" }} ({{ city_plan.jours_alloues }} jour{{ city_plan.jours_alloues|pluralize:"s" }})</h3>
+
+                        <details class="city-details">
+                             <summary>🏨 Hôtel Suggéré</summary>
+                             <div class="details-content hotel-details">
+                                {% with hotel_list=city_plan.hotel %}
+                                    {% if hotel_list and hotel_list.0 %}
+                                        {% with hotel=hotel_list.0 %}
+                                            <p><strong>{{ hotel.name|default:"Nom d'hôtel non disponible" }}</strong>
+                                                {% if hotel.rating is not None %}(⭐ {{ hotel.rating|floatformat:1 }}){% endif %}
+                                            </p>
+                                            {% if hotel.price_per_night is not None %}
+                                                <p><small>Prix approx.: {{ hotel.price_per_night|floatformat:0 }} MAD/nuit</small></p>
+                                            {% endif %}
+                                            {% if hotel.booking_link and hotel.booking_link != "N/A" %}
+                                                <p><a href="{{ hotel.booking_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">Voir les offres</a></p>
+                                            {% endif %}
+                                        {% endwith %}
+                                    {% else %}
+                                        <p>Aucun hôtel spécifique suggéré pour cette ville ou ce budget.</p>
+                                    {% endif %}
+                                {% endwith %}
+                             </div>
+                        </details>
+
+                        {% for daily_points_list in city_plan.activites_par_jour_optimisees %}
+                            <details class="daily-itinerary-details">
+                                <summary>🚗 Itinéraire Jour {{ forloop.counter }} dans {{ city_plan.ville|default:"cette ville" }}</summary>
+                                <div class="details-content">
+                                    {% if daily_points_list %}
+                                        <ul class="itinerary-list">
+                                            {% for point in daily_points_list %}
+                                            <li class="itinerary-point">
+                                                <strong>{{ forloop.counter }}. {{ point.nom|default:"Point d'intérêt" }}</strong>
+
+                                                {% if point.price_per_night is not None or point.type == "hotel" or point.item_type == "hotel" %}
+                                                    <span class="item-type-badge">(🏨 Hôtel)</span>
+                                                    {% if point.price_per_night is not None %}
+                                                        <br><small>Prix: {{ point.price_per_night|floatformat:0 }} MAD</small>
+                                                    {% endif %}
+                                                {% else %}
+                                                    <span class="item-type-badge">(🎯 {{ point.type|default:"Activité" }})</span>
+                                                    {% if point.budget_estime is not None %}
+                                                        <br><small>Budget: {{ point.budget_estime|floatformat:0 }} MAD</small>
+                                                    {% endif %}
+                                                    {% if point.duree_estimee %}
+                                                        <small>{% if point.budget_estime is not None %} | {% endif %}Durée: {{ point.duree_estimee }}</small>
+                                                    {% endif %}
+                                                {% endif %}
+                                                {% if point.description %}
+                                                    <p style="font-size:0.9em; color:var(--text-medium); margin-top:5px; padding-left:15px; border-left: 2px solid var(--border-light);"><em>{{ point.description|truncatewords:25 }}</em></p>
+                                                {% endif %}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                        <p>Aucune activité planifiée pour ce jour spécifique.</p>
+                                    {% endif %}
+                                </div>
+                            </details>
+                        {% empty %}
+                            <p>Aucun planning journalier pour {{ city_plan.ville|default:"cette ville" }}.</p>
+                        {% endfor %}
+                        <hr class="city-plan-divider">
+                    {% endif %}
+                {% endfor %}
+
+                {% if schedule_md %}
+                    <hr class="section-divider">
+                    <h3>🗓️ Emploi du Temps Détaillé (Résumé)</h3>
+                    <details class="schedule-details">
+                        <summary>Voir l'emploi du temps</summary>
+                        <div class="details-content" style="white-space: pre-wrap; font-family: monospace, monospace; font-size:0.9em; line-height:1.5;">
+                            {{ schedule_md|safe }} {# Utilisez |safe si schedule_md contient du HTML formaté, sinon linebreaksbr si c'est du texte simple #}
+                        </div>
+                    </details>
+                {% endif %}
+
+            {% else %}
+                 {% if not request.POST %}
+                    <div style="text-align: center; padding: 2em 0;">
+                        <h2 class="section-title" style="margin-bottom:1em;"><span>Prêt à explorer le Maroc ?</span></h2>
+                        {# Exemple d'image SVG décorative. Placez-la dans static/planner/images/decor/camel_silhouette.svg #}
+                        {# <img src="{% static 'planner/images/decor/camel_silhouette.svg' %}" alt="Silhouette de chameau" style="width:150px; margin-bottom:1em; opacity:0.7;"> #}
+                        <p style="font-size:1.1em; color:var(--text-medium);">Utilisez le formulaire sur la gauche pour définir vos préférences et laissez-nous composer votre itinéraire idéal !</p>
+                    </div>
+                 {% endif %}
+            {% endif %}
+        </main>
+    </div>
+{% endblock %}

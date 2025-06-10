@@ -1,0 +1,46 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}Créer un Compte - Planificateur de Voyage{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <h2>Créer Votre Compte</h2>
+
+    {% comment %} Affichage des erreurs non liées à un champ spécifique (ex: si le nom d'utilisateur existe déjà, UserCreationForm le gère souvent comme une erreur de champ username) {% endcomment %}
+    {% if form.non_field_errors %}
+        <div class="messages">
+        {% for error in form.non_field_errors %}
+            <li class="error">{{ error }}</li>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="post" action="{% url 'planner:signup' %}" class="styled-form">
+        {% csrf_token %}
+        
+        {# Afficher chaque champ du formulaire SignUpForm. form.as_p est simple. #}
+        {# Pour plus de contrôle, itérer sur les champs comme dans login.html : #}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.help_text %}
+                    <small class="form-help-text">{{ field.help_text }}</small>
+                {% endif %}
+                {% if field.errors %}
+                    <ul class="errorlist field-errors">
+                    {% for error in field.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <button type="submit" class="btn btn-success" style="width:100%;">S'inscrire</button>
+    </form>
+
+    <p class="auth-links">
+        Déjà un compte ? <a href="{% url 'login' %}">Connectez-vous ici</a>.
+    </p>
+</div>
+{% endblock %}

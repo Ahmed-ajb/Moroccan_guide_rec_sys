@@ -1,0 +1,51 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title|default:"Noter l'Élément" }}{% endblock %}
+
+{% block content %}
+    <h2 class="section-title"><span>{{ page_title|default:"Noter l'Élément" }}</span></h2>
+
+    <div class="item-to-rate-info">
+        <p>Vous êtes sur le point de noter :</p>
+        <h3>{{ item_to_rate.name }} <span class="item-type-badge-small">({{ item_to_rate.get_item_type_display }})</span></h3>
+        <p>
+            Faisant partie de votre
+            <a href="{% url 'planner:trip_detail' item_to_rate.trip_day.trip.id %}" style="color:var(--majorelle-blue); font-weight:bold;">Voyage : {{ item_to_rate.trip_day.trip.name }}</a>
+            (Jour {{ item_to_rate.trip_day.day_number }} à {{ item_to_rate.trip_day.city_name|default:"Ville non spécifiée" }}).
+        </p>
+    </div>
+    <hr class="section-divider">
+
+    <form method="post" class="rating-form">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Votre Évaluation :</legend>
+            <div class="rating-stars">
+                {% for value_str, text_label in form.fields.rating.choices|slice:":5"|dictsortreversed:0 %}
+                    {% with value=value_str|add:0 %} {# Convertit la chaîne en entier pour la comparaison #}
+                    <div class="star-radio">
+                        <input type="radio" name="{{ form.rating.html_name }}" id="id_rating_{{ value }}" value="{{ value }}" {% if form.rating.value|add:0 == value %}checked{% endif %}>
+                        <label for="id_rating_{{ value }}">★</label>
+                    </div>
+                    {% endwith %}
+                {% endfor %}
+            </div>
+            {% if form.rating.errors %}<p class="error-message field-errors" style="text-align:center; margin-top:10px;">{{ form.rating.errors|first }}</p>{% endif %}
+        </fieldset>
+
+        <div class="form-group" style="margin-top: 25px;">
+            {{ form.comment.label_tag }}
+            {{ form.comment }}
+            {% if form.comment.errors %}<p class="error-message field-errors">{{ form.comment.errors|first }}</p>{% endif %}
+        </div>
+
+        <div style="text-align: center; margin-top:30px;">
+            <button type="submit" class="btn btn-primary">
+                {% if form.initial.rating %}Mettre à Jour la Note{% else %}Soumettre la Note{% endif %}
+            </button>
+            <br><br>
+            <a href="{% url 'planner:trip_detail' item_to_rate.trip_day.trip.id %}" class="btn btn-secondary btn-small">Annuler et Retourner</a>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,1038 @@
+[
+    {
+        "ville": "Marrakech",
+        "activites": [
+            {
+                "nom": "Visite de la Médina et Place Jemaa el-Fna",
+                "type": "Culturelle",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Explorez le cœur historique animé de Marrakech, ses ruelles labyrinthiques, ses souks colorés et la célèbre place Jemaa el-Fna avec ses conteurs et charmeurs de serpents.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Jmaalefna.jpg"
+            },
+            {
+                "nom": "Excursion dans le désert d'Agafay",
+                "type": "Aventure",
+                "budget_estime": 500,
+                "devise": "MAD",
+                "description": "Découvrez un paysage désertique rocailleux unique aux portes de Marrakech, idéal pour une balade à dos de dromadaire, un dîner sous les étoiles ou une nuit en bivouac.",
+                "duree_estimee": "Demi-journée à 2 jours",
+                "image_url": "planner/images/activities/Admirer le lever ou coucher de soleil sur Erg Chebbi.jpg"
+            },
+            {
+                "nom": "Cours de cuisine marocaine",
+                "type": "Gastronomique",
+                "budget_estime": 300,
+                "devise": "MAD",
+                "description": "Apprenez les secrets de la gastronomie marocaine en préparant des plats traditionnels comme le tagine, le couscous ou les pâtisseries locales.",
+                "duree_estimee": "3-4 heures",
+                "image_url": "planner/images/activities/Cours de cuisine marocaine.jpg"
+            },
+            {
+                "nom": "Jardin Majorelle et Musée Yves Saint Laurent",
+                "type": "Culturelle",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Visitez ce jardin botanique iconique aux couleurs bleu cobalt éclatant, ancienne propriété d'Yves Saint Laurent, et le musée adjacent dédié au couturier.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Jardin Majorelle et Musée Yves Saint Laurent.jpg"
+            },
+            {
+                "nom": "Palais de la Bahia",
+                "type": "Historique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Admirez la splendeur de l'architecture et de l'artisanat marocain dans ce palais du XIXe siècle magnifiquement décoré.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Palais de la Bahia.jpg"
+            },
+            {
+                "nom": "Balade en calèche autour des remparts",
+                "type": "Loisir",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Profitez d'une promenade relaxante en calèche pour découvrir les anciens remparts ocres de la ville et ses portes monumentales.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Balade en calèche autour des remparts.jpg"
+            },
+            {
+                "nom": "Trekking dans le Haut Atlas",
+                "type": "Aventure",
+                "budget_estime": 400,
+                "devise": "MAD",
+                "description": "Partez en randonnée dans les montagnes majestueuses de l'Atlas, découvrez des villages berbères traditionnels et des paysages époustouflants.",
+                "duree_estimee": "Journée complète ou plusieurs jours",
+                "image_url": "planner/images/activities/Trekking dans le Haut Atlas.jpeg"
+            },
+            {
+                "nom": "Expérience Hammam traditionnel",
+                "type": "Bien-être",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Détendez-vous et purifiez votre corps dans un bain de vapeur traditionnel marocain, souvent suivi d'un gommage et d'un massage.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Expérience Hammam traditionnel.jpg"
+            },
+            {
+                "nom": "Shopping dans les Souks de Marrakech",
+                "type": "Marché",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Perdez-vous dans le dédale des marchés animés, négociez des tapis, lanternes, épices, articles en cuir et autres trésors artisanaux. (Budget indicatif pour achats).",
+                "duree_estimee": "2-4 heures",
+                "image_url": "planner/images/activities/Shopping dans les Souks de Marrakech.jpg"
+            },
+            {
+                "nom": "Excursion à Ouarzazate et Aït Ben Haddou",
+                "type": "Aventure",
+                "budget_estime": 350,
+                "devise": "MAD",
+                "description": "Voyagez à travers l'Atlas vers la 'Porte du Désert', visitez des studios de cinéma et la célèbre kasbah d'Aït Ben Haddou, classée à l'UNESCO.",
+                "duree_estimee": "Journée complète (longue)",
+                "image_url": "planner/images/activities/Excursion à Ouarzazate et Aït Ben Haddou.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Fès",
+        "activites": [
+            {
+                "nom": "Visite de la médina de Fès el-Bali",
+                "type": "Culturelle",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Explorez l'une des plus grandes zones piétonnes urbaines médiévales au monde, un site du patrimoine mondial de l'UNESCO, avec ses artisans et ses monuments historiques.",
+                "duree_estimee": "Journée complète recommandée",
+                "image_url": "planner/images/activities/Visite de la médina de Fès el-Bali.webp"
+            },
+            {
+                "nom": "Atelier de poterie ou céramique Fassi",
+                "type": "Artisanat",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Participez à un atelier pratique pour découvrir les techniques traditionnelles de la poterie et de la céramique bleue et blanche de Fès.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Atelier de poterie ou céramique Fassi.jpg"
+            },
+            {
+                "nom": "Excursion aux ruines romaines de Volubilis",
+                "type": "Historique",
+                "budget_estime": 400,
+                "devise": "MAD",
+                "description": "Visitez les vestiges impressionnants d'une ancienne cité romaine, un site de l'UNESCO, connu pour ses mosaïques bien conservées.",
+                "duree_estimee": "Demi-journée (souvent combinée avec Meknès/Moulay Idriss)",
+                "image_url": "planner/images/activities/Excursion aux ruines romaines de Volubilis.jpg"
+            },
+            {
+                "nom": "Mausolée de Moulay Idriss II",
+                "type": "Historique",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Visitez (extérieur pour les non-musulmans) le sanctuaire vénéré du fondateur de Fès, un important lieu de pèlerinage.",
+                "duree_estimee": "30 min - 1 heure",
+                "image_url": "planner/images/activities/Mausolée de Moulay Idriss II.jpg"
+            },
+            {
+                "nom": "Musée Nejjarine des Arts et Métiers du Bois",
+                "type": "Culturelle",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Découvrez l'art du travail du bois marocain dans ce musée superbement aménagé dans un ancien foundouk (caravansérail) restauré.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Musée Nejjarine des Arts et Métiers du Bois.webp"
+            },
+            {
+                "nom": "Exploration des tanneries (ex: Chouara)",
+                "type": "Artisanat",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Observez le processus séculaire de tannage et de teinture du cuir depuis les terrasses surplombant les tanneries (accès souvent via des maroquineries).",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Exploration des tanneries.jpg"
+            },
+            {
+                "nom": "Dégustation de thé à la menthe dans un Riad",
+                "type": "Gastronomique",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Savourez l'hospitalité marocaine et le thé à la menthe traditionnel dans le cadre paisible d'une maison d'hôtes traditionnelle (Riad).",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Dégustation de thé à la menthe dans un Riad.jpg"
+            },
+            {
+                "nom": "Jardin Jnan Sbil",
+                "type": "Loisir",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Profitez d'une pause rafraîchissante dans ce jardin public paisible, une oasis de verdure entre Fès el-Bali et Fès el-Jdid.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Jardin Jnan Sbil.jpg"
+            },
+            {
+                "nom": "Excursion à Ifrane et la forêt de cèdres",
+                "type": "Nature",
+                "budget_estime": 300,
+                "devise": "MAD",
+                "description": "Découvrez la 'Petite Suisse' du Maroc avec son architecture alpine et visitez la forêt de cèdres voisine, habitée par des singes magots.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Excursion à Ifrane et la forêt de cèdres.jpg"
+            },
+            {
+                "nom": "Visite d'une Médersa (ex: Bou Inania, Al-Attarine)",
+                "type": "Historique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Admirez l'architecture islamique complexe et les détails décoratifs (zellige, stuc, bois sculpté) de ces anciennes écoles coraniques.",
+                "duree_estimee": "1 heure par médersa",
+                "image_url": "planner/images/activities/Visite d'une Médersa.webp"
+            }
+        ]
+    },
+    {
+        "ville": "Casablanca",
+        "activites": [
+            {
+                "nom": "Visite guidée de la Mosquée Hassan II",
+                "type": "Historique",
+                "budget_estime": 120,
+                "devise": "MAD",
+                "description": "Explorez ce chef-d'œuvre architectural moderne, l'une des plus grandes mosquées du monde, construite en partie sur l'océan Atlantique.",
+                "duree_estimee": "1.5-2 heures (visite guidée obligatoire pour non-musulmans)",
+                "image_url": "planner/images/activities/Visite guidée de la Mosquée Hassan II.jpg"
+            },
+            {
+                "nom": "Promenade sur la Corniche d'Ain Diab",
+                "type": "Loisir",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Flânez le long du front de mer animé, bordé de plages, piscines, cafés, restaurants et clubs.",
+                "duree_estimee": "1-3 heures",
+                "image_url": "planner/images/activities/Promenade sur la Corniche d'Ain Diab.jpeg"
+            },
+            {
+                "nom": "Dégustation de fruits de mer au Marché Central ou Port",
+                "type": "Gastronomique",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Savourez des fruits de mer frais et des poissons grillés dans l'ambiance animée du marché central ou dans les restaurants près du port de pêche.",
+                "duree_estimee": "1-2 heures (repas)",
+                "image_url": "planner/images/activities/Dégustation de fruits de mer au Marché Central ou Port.jpg"
+            },
+            {
+                "nom": "Détente au Parc de la Ligue Arabe",
+                "type": "Loisir",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Profitez d'une promenade relaxante dans ce grand parc urbain, un espace vert agréable au cœur de la ville.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Détente au Parc de la Ligue Arabe.jpg"
+            },
+            {
+                "nom": "Visite de la Villa des Arts",
+                "type": "Culturelle",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Découvrez des expositions d'art contemporain marocain et international dans cette élégante villa Art déco.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite de la Villa des Arts.jpeg"
+            },
+            {
+                "nom": "Exploration du Quartier Habous (Nouvelle Médina)",
+                "type": "Marché",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Déambulez dans ce quartier unique qui mêle architecture marocaine traditionnelle et urbanisme français, avec ses arcades, ses souks et ses librairies.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Exploration du Quartier Habous (Nouvelle Médina).jpg"
+            },
+            {
+                "nom": "Excursion à El Jadida et sa Cité Portugaise",
+                "type": "Aventure",
+                "budget_estime": 250,
+                "devise": "MAD",
+                "description": "Faites une excursion d'une journée dans cette ville côtière pour visiter sa forteresse portugaise classée à l'UNESCO et sa citerne souterraine unique.",
+                "duree_estimee": "Journée complète",
+                "image_url": "planner/images/activities/Excursion à El Jadida et sa Cité Portugaise.jpg"
+            },
+            {
+                "nom": "Shopping et divertissement au Morocco Mall",
+                "type": "Loisir",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Visitez l'un des plus grands centres commerciaux d'Afrique, offrant des boutiques internationales, un aquarium géant, une fontaine musicale et un cinéma IMAX. (Budget indicatif pour achats/activités).",
+                "duree_estimee": "2-4 heures ou plus",
+                "image_url": "planner/images/activities/Shopping et divertissement au Morocco Mall.jpg"
+            },
+            {
+                "nom": "Surf ou détente sur la Plage de Ain Diab",
+                "type": "Loisir",
+                "budget_estime": 30,
+                "devise": "MAD",
+                "description": "Profitez de la plage urbaine pour bronzer, nager (selon la saison et les conditions) ou prendre un cours de surf.",
+                "duree_estimee": "Variable",
+                "image_url": "planner/images/activities/Surf ou détente sur la Plage de Ain Diab.jpg"
+            },
+            {
+                "nom": "Découverte de l'architecture Art Déco du centre-ville",
+                "type": "Culturelle",
+                "budget_estime": 20,
+                "devise": "MAD",
+                "description": "Promenez-vous dans le centre-ville pour admirer les nombreux bâtiments Art Déco datant de la période du protectorat français.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Découverte de l'architecture Art Déco du centre-ville.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Meknès",
+        "activites": [
+            {
+                "nom": "Visite du Mausolée de Moulay Ismaïl",
+                "type": "Historique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Découvrez le tombeau richement décoré du puissant sultan Alaouite qui fit de Meknès sa capitale impériale au XVIIe siècle.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Visite du Mausolée de Moulay Ismaïl.jpg"
+            },
+            {
+                "nom": "Visite de Heri es-Souani (Greniers et Ecuries Royales)",
+                "type": "Historique",
+                "budget_estime": 90,
+                "devise": "MAD",
+                "description": "Explorez les vestiges impressionnants des immenses greniers et des écuries conçues pour abriter des milliers de chevaux sous le règne de Moulay Ismaïl.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite de Heri es-Souani.jpg"
+            },
+            {
+                "nom": "Excursion à Moulay Idriss Zerhoun",
+                "type": "Historique",
+                "budget_estime": 300,
+                "devise": "MAD",
+                "description": "Visitez la ville sainte perchée sur une colline, abritant le mausolée de Moulay Idriss Ier, fondateur de la première dynastie du Maroc.",
+                "duree_estimee": "2-3 heures (souvent combinée avec Volubilis)",
+                "image_url": "planner/images/activities/Excursion à Moulay Idriss Zerhoun.jpg"
+            },
+            {
+                "nom": "Musée Dar Jamaï (Musée des Arts Marocains)",
+                "type": "Culturelle",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Admirez une collection d'artisanat marocain (céramiques, tapis, bijoux, boiseries) dans un magnifique palais de la fin du XIXe siècle.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Musée Dar Jamaï.jpg"
+            },
+            {
+                "nom": "Flânerie sur la Place El Hedim et Souk",
+                "type": "Marché",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Découvrez la grande place animée en face de Bab Mansour et explorez les souks adjacents, moins touristiques que ceux de Fès ou Marrakech.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Flânerie sur la Place El Hedim.jpg"
+            },
+            {
+                "nom": "Admirer la Porte Bab Mansour el Aleuj",
+                "type": "Historique",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Contemplez la plus célèbre et la plus monumentale des portes de Meknès, réputée pour sa taille imposante et ses riches décorations en zellige.",
+                "duree_estimee": "30 minutes (observation/photos)",
+                "image_url": "planner/images/activities/la Porte Bab Mansour el Aleuj.jpg"
+            },
+            {
+                "nom": "Dégustation d'olives et produits locaux",
+                "type": "Gastronomique",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Goûtez aux spécialités de la région, notamment les excellentes olives et huiles d'olive, ainsi que d'autres produits du terroir trouvés au marché.",
+                "duree_estimee": "30 min - 1 heure",
+                "image_url": "planner/images/activities/Dégustation d'olives et produits locaux.jpg"
+            },
+            {
+                "nom": "Visite de la médina de Meknès",
+                "type": "Culturelle",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Explorez la médina historique, classée au patrimoine mondial de l'UNESCO, plus calme et compacte que celle de Fès.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Visite de la médina de Meknès.jpg"
+            },
+            {
+                "nom": "Excursion aux ruines romaines de Volubilis",
+                "type": "Historique",
+                "budget_estime": 400,
+                "devise": "MAD",
+                "description": "Visitez le site archéologique majeur de Volubilis, ancienne capitale de la Maurétanie Tingitane, célèbre pour ses mosaïques.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Excursion aux ruines romaines de Volubilis.jpg"
+            },
+            {
+                "nom": "Bassin de l'Agdal",
+                "type": "Historique",
+                "budget_estime": 20,
+                "devise": "MAD",
+                "description": "Découvrez cet immense réservoir d'eau historique, construit pour l'irrigation des jardins royaux, situé près des greniers Heri es-Souani.",
+                "duree_estimee": "30 minutes",
+                "image_url": "planner/images/activities/Bassin de l'Agdal.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Rabat",
+        "activites": [
+            {
+                "nom": "Visite de la Tour Hassan et Mausolée Mohammed V",
+                "type": "Historique",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Admirez l'emblématique minaret inachevé du XIIe siècle et le somptueux mausolée moderne abritant les tombes des rois Mohammed V et Hassan II.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite de la Tour Hassan et Mausolée Mohammed V.jpg"
+            },
+            {
+                "nom": "Promenade dans la Kasbah des Oudayas",
+                "type": "Culturelle",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Déambulez dans les ruelles pittoresques aux murs bleus et blancs de cette ancienne forteresse, visitez le Jardin Andalou et profitez de la vue sur l'océan.",
+                "duree_estimee": "1.5-2.5 heures",
+                "image_url": "planner/images/activities/Promenade dans la Kasbah des Oudayas.jpg"
+            },
+            {
+                "nom": "Visite du Musée Mohammed VI d'Art Moderne et Contemporain (MMVI)",
+                "type": "Culturelle",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Explorez le principal musée d'art moderne et contemporain du Maroc, présentant des œuvres d'artistes marocains et internationaux.",
+                "duree_estimee": "1.5-2 heures",
+                "image_url": "planner/images/activities/Visite du Musée Mohammed VI d'Art Moderne et Contemporain (MMVI).jpg"
+            },
+            {
+                "nom": "Dégustation de spécialités marocaines dans la Médina",
+                "type": "Gastronomique",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Goûtez à la cuisine locale dans l'un des nombreux petits restaurants ou stands de nourriture de la médina de Rabat.",
+                "duree_estimee": "1-2 heures (repas)",
+                "image_url": "planner/images/activities/Dégustation de spécialités marocaines dans la Médina.jpg"
+            },
+            {
+                "nom": "Excursion à la plage (ex: Plage des Nations, Skhirat)",
+                "type": "Nature",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Profitez du soleil et de l'océan sur l'une des plages situées à proximité de Rabat, idéales pour la détente ou les activités nautiques.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Balade dans la médina bleue.jpg"
+            },
+            {
+                "nom": "Visite de la Nécropole de Chellah",
+                "type": "Historique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Explorez ce site fascinant mêlant ruines romaines antiques et nécropole mérinide médiévale, au milieu de jardins luxuriants peuplés de cigognes.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite de la Nécropole de Chellah.jpg"
+            },
+            {
+                "nom": "Balade le long du fleuve Bouregreg et Marina",
+                "type": "Loisir",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Promenez-vous sur les quais aménagés le long du fleuve, profitez de la vue sur Salé, la Kasbah et la Tour Hassan, et découvrez la nouvelle marina.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Balade le long du fleuve Bouregreg et Marina.jpg"
+            },
+            {
+                "nom": "Shopping dans la Médina et Rue des Consuls",
+                "type": "Marché",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Faites des achats dans la médina animée, en particulier dans la Rue des Consuls, connue pour ses tapis, articles en cuir et artisanat.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Shopping dans la Médina et Rue des Consuls.jpg"
+            },
+            {
+                "nom": "Détente au Jardin d'Essais Botaniques",
+                "type": "Loisir",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Relaxez-vous dans ce jardin botanique historique et bien entretenu, offrant une grande variété de plantes et d'arbres du Maroc et d'ailleurs.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Détente au Jardin d'Essais Botaniques.jpg"
+            },
+            {
+                "nom": "Traversée en barque vers Salé",
+                "type": "Aventure",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Prenez une barque traditionnelle pour traverser le fleuve Bouregreg et explorez la médina historique de Salé, la ville voisine.",
+                "duree_estimee": "2-4 heures (traversée et visite)",
+                "image_url": "planner/images/activities/Observation des oiseaux au Lac Dayet Srji (en saison).jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Agadir",
+        "activites": [
+            {
+                "nom": "Détente et activités sur la plage d'Agadir",
+                "type": "Loisir",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Profitez de la longue plage de sable fin pour bronzer, nager, marcher ou pratiquer des sports nautiques comme le jet ski ou le surf.",
+                "duree_estimee": "Variable (quelques heures à journée complète)",
+                "image_url": "planner/images/activities/Détente et activités sur la plage d'Agadir.jpg"
+            },
+            {
+                "nom": "Excursion à Paradise Valley",
+                "type": "Aventure",
+                "budget_estime": 300,
+                "devise": "MAD",
+                "description": "Évadez-vous dans cette oasis luxuriante située dans les contreforts de l'Atlas, connue pour ses piscines naturelles, ses cascades (en saison) et ses palmiers.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Excursion à Paradise Valley.jpg"
+            },
+            {
+                "nom": "Visite du Souk El Had",
+                "type": "Marché",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Explorez l'un des plus grands marchés traditionnels du Maroc, où vous trouverez de tout : épices, artisanat, vêtements, fruits, légumes et souvenirs.",
+                "duree_estimee": "2-4 heures",
+                "image_url": "planner/images/activities/Visite du Souk El Had.jpg"
+            },
+            {
+                "nom": "Observation des oiseaux au Parc National de Souss-Massa",
+                "type": "Nature",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Découvrez cette réserve naturelle côtière, un site important pour l'observation des oiseaux, notamment l'ibis chauve, une espèce menacée.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Observation des oiseaux au Parc National de Souss-Massa.jpg"
+            },
+            {
+                "nom": "Excursion à Taroudant, la 'Petite Marrakech'",
+                "type": "Aventure",
+                "budget_estime": 350,
+                "devise": "MAD",
+                "description": "Visitez cette charmante ville fortifiée, entourée de remparts ocres bien conservés, et explorez ses souks animés.",
+                "duree_estimee": "Journée complète",
+                "image_url": "planner/images/activities/Excursion à Taroudant, la 'Petite Marrakech.jpg"
+            },
+            {
+                "nom": "Visite du Musée du Patrimoine Amazigh",
+                "type": "Culturelle",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Apprenez-en davantage sur la culture, l'histoire et les traditions du peuple berbère (Amazigh) de la région Souss-Massa.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Visite du Musée du Patrimoine Amazigh.jpg"
+            },
+            {
+                "nom": "Balade en quad ou buggy dans l'arrière-pays",
+                "type": "Aventure",
+                "budget_estime": 400,
+                "devise": "MAD",
+                "description": "Partez à l'aventure sur quatre roues à travers les dunes de sable, les pistes rurales et les paysages variés autour d'Agadir.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Balade en quad ou buggy dans l'arrière-pays.jpg"
+            },
+            {
+                "nom": "Excursion en bateau le long de la côte",
+                "type": "Nature",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Profitez d'une sortie en mer pour admirer la côte d'Agadir depuis l'océan, avec possibilité de baignade et parfois d'observation de dauphins.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Excursion en bateau le long de la côte.jpg"
+            },
+            {
+                "nom": "Montée à la Kasbah d'Agadir Oufella",
+                "type": "Historique",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Visitez les ruines de l'ancienne forteresse détruite par le tremblement de terre de 1960 et profitez d'une vue panoramique imprenable sur la ville et la baie.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Montée à la Kasbah d'Agadir Oufella.jpg"
+            },
+            {
+                "nom": "Visite de Crocoparc",
+                "type": "Loisir",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Découvrez un parc zoologique dédié aux crocodiles du Nil, aménagé dans un jardin botanique luxuriant avec des plantes exotiques.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Visite de Crocoparc.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Chefchaouen",
+        "activites": [
+            {
+                "nom": "Balade dans la médina bleue",
+                "type": "Culturelle",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Perdez-vous volontairement dans les ruelles étroites et les escaliers de cette médina unique, célèbre pour ses bâtiments peints en différentes nuances de bleu.",
+                "duree_estimee": "2-4 heures ou plus",
+                "image_url": "planner/images/activities/Balade dans la médina bleue.jpg"
+            },
+            {
+                "nom": "Randonnée dans les montagnes du Rif (Parc Talassemtane)",
+                "type": "Aventure",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Explorez les sentiers de randonnée dans le parc national environnant, offrant des paysages montagneux spectaculaires, des forêts et une nature préservée.",
+                "duree_estimee": "Demi-journée à plusieurs jours",
+                "image_url": "planner/images/activities/Randonnée dans les montagnes du Rif (Parc Talassemtane).jpg"
+            },
+            {
+                "nom": "Visite de la Kasbah et Musée Ethnographique",
+                "type": "Historique",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Découvrez la forteresse restaurée au cœur de la médina, avec ses jardins paisibles et son petit musée présentant l'artisanat et les traditions locales.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite de la Kasbah et Musée Ethnographique.jpg"
+            },
+            {
+                "nom": "Excursion aux Cascades d'Akchour",
+                "type": "Nature",
+                "budget_estime": 250,
+                "devise": "MAD",
+                "description": "Faites une randonnée agréable jusqu'aux magnifiques cascades et au 'Pont de Dieu', une arche naturelle impressionnante, dans un cadre verdoyant.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Excursion aux Cascades d'Akchour.jpg"
+            },
+            {
+                "nom": "Shopping d'artisanat local (laine, cuir, pigments)",
+                "type": "Artisanat",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Fouinez dans les petites boutiques pour trouver des produits artisanaux typiques de la région, notamment des articles en laine (djellabas, couvertures), du cuir et des pigments naturels.",
+                "duree_estimee": "1-3 heures",
+                "image_url": "planner/images/activities/Shopping d'artisanat local (laine, cuir, pigments).jpg"
+            },
+            {
+                "nom": "Détente sur la Place Outa el Hammam",
+                "type": "Loisir",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Installez-vous à la terrasse d'un café sur la place principale animée, observez la vie locale et admirez la Grande Mosquée avec son minaret octogonal.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Détente sur la Place Outa el Hammam.jpg"
+            },
+            {
+                "nom": "Dégustation de spécialités locales (fromage de chèvre)",
+                "type": "Gastronomique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Goûtez aux saveurs de la région, en particulier le fromage de chèvre frais local ('jben'), souvent servi au petit-déjeuner ou dans les salades.",
+                "duree_estimee": "1 heure (repas ou dégustation)",
+                "image_url": "planner/images/activities/Dégustation de spécialités locales (fromage de chèvre).jpg"
+            },
+            {
+                "nom": "Coucher de soleil depuis la Mosquée Espagnole (Bouzafer)",
+                "type": "Nature",
+                "budget_estime": 20,
+                "devise": "MAD",
+                "description": "Montez à pied jusqu'à la mosquée abandonnée sur la colline en fin de journée pour profiter d'une vue panoramique spectaculaire sur la ville bleue au coucher du soleil.",
+                "duree_estimee": "1.5-2 heures (montée et observation)",
+                "image_url": "planner/images/activities/Coucher de soleil depuis la Mosquée Espagnole (Bouzafer).jpg"
+            },
+            {
+                "nom": "Visite de la source Ras El Maa",
+                "type": "Loisir",
+                "budget_estime": 30,
+                "devise": "MAD",
+                "description": "Découvrez la source d'eau vive où la rivière sort de la montagne, un lieu rafraîchissant où les habitants viennent parfois laver leur linge.",
+                "duree_estimee": "30 min - 1 heure",
+                "image_url": "planner/images/activities/Visite de la source Ras El Maa.jpg"
+            },
+            {
+                "nom": "Atelier de peinture ou de tissage",
+                "type": "Artisanat",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Participez à un atelier pour vous initier aux techniques de peinture inspirées par les couleurs de la ville ou au tissage traditionnel de la région.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Atelier de peinture ou de tissage.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Essaouira",
+        "activites": [
+            {
+                "nom": "Flânerie dans la Médina (UNESCO)",
+                "type": "Culturelle",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Explorez les ruelles charmantes et animées de la médina d'Essaouira, connue pour son ambiance décontractée, ses maisons blanches aux volets bleus et ses remparts.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Flânerie dans la Médina (UNESCO).jpg"
+            },
+            {
+                "nom": "Promenade sur les Remparts et Skala de la Ville",
+                "type": "Historique",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Marchez le long des fortifications maritimes historiques, admirez les anciens canons portugais et profitez de vues imprenables sur l'océan Atlantique.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Promenade sur les Remparts et Skala de la Ville.jpg"
+            },
+            {
+                "nom": "Visite du Port de Pêche animé",
+                "type": "Loisir",
+                "budget_estime": 30,
+                "devise": "MAD",
+                "description": "Observez le retour des bateaux de pêche colorés, l'activité des pêcheurs et des mouettes, et l'ambiance vivante du port.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Visite du Port de Pêche animé.jpg"
+            },
+            {
+                "nom": "Activités sur la Plage (Windsurf, Kitesurf, Balade)",
+                "type": "Sport/Loisir",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Profitez de la longue plage balayée par les vents, idéale pour la pratique du windsurf et du kitesurf, ou simplement pour une promenade ou une balade à cheval/dromadaire.",
+                "duree_estimee": "Variable (cours env. 2-3h)",
+                "image_url": "planner/images/activities/Activités sur la Plage (Windsurf, Kitesurf, Balade).jpg"
+            },
+            {
+                "nom": "Découverte de la musique Gnaoua",
+                "type": "Culturelle",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Assistez à une performance de musique Gnaoua, un genre musical spirituel aux racines africaines, dans un café, un riad ou lors du festival annuel (juin).",
+                "duree_estimee": "Soirée",
+                "image_url": "planner/images/activities/Découverte de la musique Gnaoua.jpg"
+            },
+            {
+                "nom": "Visite des Galeries d'Art et Ateliers d'Artistes",
+                "type": "Culturelle",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Explorez les nombreuses galeries d'art et ateliers disséminés dans la médina, présentant des œuvres d'artistes locaux et internationaux.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Visite des Galeries d'Art et Ateliers d'Artistes.jpg"
+            },
+            {
+                "nom": "Dégustation de poissons grillés au port",
+                "type": "Gastronomique",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Choisissez votre poisson frais directement sur les étals près du port et faites-le griller sur place pour un repas savoureux et authentique.",
+                "duree_estimee": "1-1.5 heures (repas)",
+                "image_url": "planner/images/activities/Dégustation de poissons grillés au port.jpg"
+            },
+            {
+                "nom": "Découverte de l'artisanat en bois de Thuya",
+                "type": "Artisanat",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Visitez les ateliers des artisans qui travaillent le bois de thuya, une spécialité locale, pour créer des boîtes, des objets décoratifs et des meubles marquetés.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Découverte de l'artisanat en bois de Thuya.jpg"
+            },
+            {
+                "nom": "Excursion à l'Île de Mogador (observation d'oiseaux)",
+                "type": "Nature",
+                "budget_estime": 250,
+                "devise": "MAD",
+                "description": "Faites une sortie en bateau (si autorisé et conditions météo favorables) autour de l'île pour observer les faucons d'Éléonore et d'autres oiseaux marins.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Excursion à l'Île de Mogador (observation d'oiseaux).jpg"
+            },
+            {
+                "nom": "Cours de surf à Sidi Kaouki",
+                "type": "Sport/Aventure",
+                "budget_estime": 300,
+                "devise": "MAD",
+                "description": "Prenez un cours de surf sur la plage voisine de Sidi Kaouki, un spot réputé pour les débutants et les surfeurs confirmés.",
+                "duree_estimee": "Demi-journée (incluant trajet)",
+                "image_url": "planner/images/activities/Cours de surf à Sidi Kaouki.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Ouarzazate",
+        "activites": [
+            {
+                "nom": "Visite de la Kasbah de Taourirt",
+                "type": "Historique",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Explorez cette imposante kasbah en pisé, ancienne résidence du Pacha Glaoui, avec ses nombreuses pièces décorées et ses cours intérieures.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite de la Kasbah de Taourirt.png"
+            },
+            {
+                "nom": "Visite des Studios de Cinéma (Atlas ou CLA)",
+                "type": "Culturelle",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Découvrez les décors de films célèbres (Gladiator, Game of Thrones, La Momie...) tournés dans l'un des grands studios de cinéma de Ouarzazate.",
+                "duree_estimee": "1.5-2 heures par studio",
+                "image_url": "planner/images/activities/Visite des Studios de Cinéma (Atlas ou CLA).jpg"
+            },
+            {
+                "nom": "Musée du Cinéma",
+                "type": "Culturelle",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Situé en face de la Kasbah Taourirt dans un ancien studio, ce musée expose des décors, costumes et équipements utilisés dans divers tournages.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Musée du Cinéma.jpg"
+            },
+            {
+                "nom": "Excursion à l'Oasis de Fint",
+                "type": "Nature",
+                "budget_estime": 250,
+                "devise": "MAD",
+                "description": "Visitez cette oasis verdoyante nichée au creux d'un canyon rocheux, découvrez la vie traditionnelle de ses habitants et profitez de la fraîcheur.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Excursion à l'Oasis de Fint.jpg"
+            },
+            {
+                "nom": "Visite de la Kasbah Tifoultoute",
+                "type": "Historique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Découvrez une autre kasbah historique de la région, offrant de belles vues sur la palmeraie et l'oued Ouarzazate (parfois utilisée comme hôtel/restaurant).",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Visite de la Kasbah Tifoultoute.jpg"
+            },
+            {
+                "nom": "Exploration du Marché Central",
+                "type": "Marché",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Plongez dans l'ambiance locale en visitant le marché central pour découvrir les produits frais, épices, artisanat et l'animation quotidienne.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Exploration du Marché Central.jpg"
+            },
+            {
+                "nom": "Excursion dans la Vallée du Drâa",
+                "type": "Aventure",
+                "budget_estime": 400,
+                "devise": "MAD",
+                "description": "Parcourez une partie de la plus longue vallée de palmiers dattiers du Maroc, admirez ses ksour (villages fortifiés) et ses paysages pré-sahariens.",
+                "duree_estimee": "Journée complète",
+                "image_url": "planner/images/activities/Excursion dans la Vallée du Drâa.jpg"
+            },
+            {
+                "nom": "Excursion à Aït Ben Haddou (UNESCO)",
+                "type": "Historique",
+                "budget_estime": 200,
+                "devise": "MAD",
+                "description": "Visitez le ksar le plus célèbre du Maroc, un village fortifié en pisé magnifiquement préservé, site du patrimoine mondial et lieu de tournage de nombreux films.",
+                "duree_estimee": "Demi-journée",
+                "image_url": "planner/images/activities/Excursion à Asilah.jpg"
+            },
+            {
+                "nom": "Découverte du Lac El Mansour Eddahbi",
+                "type": "Nature",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Profitez des paysages autour de ce grand lac artificiel, lieu d'observation ornithologique (selon le niveau d'eau) et de détente.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Découverte du Lac El Mansour Eddahbi.jpg"
+            },
+            {
+                "nom": "Dégustation de dattes et produits locaux",
+                "type": "Gastronomique",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Goûtez aux délicieuses dattes de la région (notamment celles de la vallée du Drâa) et à d'autres spécialités locales comme le safran de Taliouine.",
+                "duree_estimee": "30 minutes",
+                "image_url": "planner/images/activities/Dégustation de dattes et produits locaux.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Tangier",
+        "activites": [
+            {
+                "nom": "Exploration de la Kasbah et Musée de la Kasbah",
+                "type": "Historique",
+                "budget_estime": 70,
+                "devise": "MAD",
+                "description": "Perdez-vous dans les ruelles de l'ancienne citadelle, visitez le musée aménagé dans l'ancien palais du sultan (Dar el Makhzen) et admirez la vue sur le détroit.",
+                "duree_estimee": "2-3 heures",
+                "image_url": "planner/images/activities/Exploration de la Kasbah et Musée de la Kasbah.jpg"
+            },
+            {
+                "nom": "Balade dans la Médina (Petit Socco et Grand Socco)",
+                "type": "Culturelle",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Déambulez dans la vieille ville animée, découvrez ses places historiques (Petit Socco et Grand Socco/Place du 9 Avril 1947), ses marchés et son ambiance cosmopolite.",
+                "duree_estimee": "2-4 heures",
+                "image_url": "planner/images/activities/Balade dans la Médina (Petit Socco et Grand Socco).jpg"
+            },
+            {
+                "nom": "Visite des Grottes d'Hercule",
+                "type": "Nature",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Explorez ces grottes naturelles en bord de mer, célèbres pour leur ouverture sur l'océan rappelant la forme de l'Afrique et liées à la légende d'Hercule.",
+                "duree_estimee": "1-1.5 heures (incluant trajet)",
+                "image_url": "planner/images/activities/Visite des Grottes d'Hercule.jpg"
+            },
+            {
+                "nom": "Découverte du Cap Spartel",
+                "type": "Nature",
+                "budget_estime": 80,
+                "devise": "MAD",
+                "description": "Rendez-vous au phare du Cap Spartel, point de rencontre mythique entre l'océan Atlantique et la mer Méditerranée, et profitez des vues panoramiques.",
+                "duree_estimee": "1 heure (incluant trajet)",
+                "image_url": "planner/images/activities/Découverte du Cap Spartel.jpg"
+            },
+            {
+                "nom": "Visite du Musée de la Légation Américaine",
+                "type": "Historique",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Découvrez ce musée fascinant, seul monument historique américain situé à l'étranger, témoignant des relations anciennes entre le Maroc et les États-Unis.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Visite du Musée de la Légation Américaine.jpg"
+            },
+            {
+                "nom": "Promenade sur la Corniche de Tanger",
+                "type": "Loisir",
+                "budget_estime": 40,
+                "devise": "MAD",
+                "description": "Flânez le long du front de mer moderne et réaménagé, profitez de la brise marine, des cafés et de la vue sur le port et la baie.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Promenade sur la Corniche de Tanger.jpeg"
+            },
+            {
+                "nom": "Pause thé au Café Hafa",
+                "type": "Loisir",
+                "budget_estime": 60,
+                "devise": "MAD",
+                "description": "Savourez un thé à la menthe dans ce café mythique en terrasses, fréquenté par de nombreux artistes et écrivains, offrant une vue imprenable sur le détroit de Gibraltar.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Pause thé au Café Hafa.png"
+            },
+            {
+                "nom": "Admirer l'architecture du Théâtre Cervantes (extérieur)",
+                "type": "Culturelle",
+                "budget_estime": 10,
+                "devise": "MAD",
+                "description": "Contemplez la façade de ce grand théâtre historique de style Art nouveau espagnol, témoin du passé international de Tanger (actuellement fermé pour rénovation).",
+                "duree_estimee": "15-30 minutes",
+                "image_url": "planner/images/activities/l'architecture du Théâtre Cervantes (extérieur).jpg"
+            },
+            {
+                "nom": "Excursion à Asilah",
+                "type": "Aventure",
+                "budget_estime": 300,
+                "devise": "MAD",
+                "description": "Faites une excursion d'une journée dans cette charmante ville côtière fortifiée, connue pour sa médina blanche et bleue, ses remparts et ses fresques murales.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Excursion à Asilah.jpg"
+            },
+            {
+                "nom": "Déguster une Bissara",
+                "type": "Gastronomique",
+                "budget_estime": 40,
+                "devise": "MAD",
+                "description": "Goûtez à la 'Bissara', une soupe traditionnelle épaisse à base de fèves ou de pois cassés, particulièrement populaire dans le nord du Maroc.",
+                "duree_estimee": "30 minutes (collation/repas léger)",
+                "image_url": "planner/images/activities/Déguster une Bissara.jpg"
+            }
+        ]
+    },
+    {
+        "ville": "Merzouga (Erg Chebbi)",
+        "activites": [
+            {
+                "nom": "Balade à dos de dromadaire dans les dunes",
+                "type": "Aventure",
+                "budget_estime": 250,
+                "devise": "MAD",
+                "description": "Vivez l'expérience emblématique du désert en parcourant les majestueuses dunes de sable doré de l'Erg Chebbi à dos de dromadaire.",
+                "duree_estimee": "1.5-2 heures (pour coucher/lever soleil)",
+                "image_url": "planner/images/activities/Balade à dos de dromadaire dans les dunes.jpg"
+            },
+            {
+                "nom": "Nuit en bivouac berbère sous les étoiles",
+                "type": "Aventure",
+                "budget_estime": 500,
+                "devise": "MAD",
+                "description": "Passez une nuit inoubliable dans un campement traditionnel au cœur des dunes, profitez d'un dîner typique, de musique berbère et d'un ciel étoilé exceptionnel.",
+                "duree_estimee": "Nuit complète (incluant dîner/petit-déj)",
+                "image_url": "planner/images/activities/Nuit en bivouac berbère sous les étoiles.jpg"
+            },
+            {
+                "nom": "Admirer le lever et/ou coucher de soleil sur Erg Chebbi",
+                "type": "Nature",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Grimpez au sommet d'une haute dune pour assister au spectacle magique du soleil se levant ou se couchant sur l'immensité du désert de sable.",
+                "duree_estimee": "1-1.5 heures par événement",
+                "image_url": "planner/images/activities/Admirer le lever ou coucher de soleil sur Erg Chebbi.jpg"
+            },
+            {
+                "nom": "Excursion en 4x4 autour des dunes",
+                "type": "Aventure",
+                "budget_estime": 800,
+                "devise": "MAD",
+                "description": "Explorez les environs de l'Erg Chebbi en véhicule tout-terrain : visitez des familles nomades, des mines de fossiles, des villages abandonnés et des paysages désertiques variés.",
+                "duree_estimee": "Demi-journée à journée complète",
+                "image_url": "planner/images/activities/Excursion en 4x4 autour des dunes.jpg"
+            },
+            {
+                "nom": "Sandboarding sur les dunes",
+                "type": "Sport/Loisir",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Amusez-vous à glisser sur les pentes de sable fin des dunes de l'Erg Chebbi sur une planche de sandboard.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Sandboarding sur les dunes.jpg"
+            },
+            {
+                "nom": "Écouter la musique Gnaoua à Khamlia",
+                "type": "Culturelle",
+                "budget_estime": 100,
+                "devise": "MAD",
+                "description": "Visitez le village de Khamlia, habité par des descendants d'esclaves subsahariens, et assistez à une performance de leur musique et danse Gnaoua hypnotique.",
+                "duree_estimee": "1-1.5 heures",
+                "image_url": "planner/images/activities/Écouter la musique Gnaoua à Khamlia.jpg"
+            },
+            {
+                "nom": "Observation des oiseaux au Lac Dayet Srji (en saison)",
+                "type": "Nature",
+                "budget_estime": 50,
+                "devise": "MAD",
+                "description": "Si le lac est en eau (principalement en hiver/printemps), observez diverses espèces d'oiseaux migrateurs, y compris parfois des flamants roses.",
+                "duree_estimee": "1 heure",
+                "image_url": "planner/images/activities/Observation des oiseaux au Lac Dayet Srji (en saison).jpg"
+            },
+            {
+                "nom": "Balade en Quad ou Buggy dans les dunes",
+                "type": "Aventure",
+                "budget_estime": 600,
+                "devise": "MAD",
+                "description": "Pour les amateurs de sensations fortes, explorez les dunes de manière plus dynamique en conduisant un quad ou un buggy.",
+                "duree_estimee": "1-2 heures",
+                "image_url": "planner/images/activities/Balade en quad ou buggy dans l'arrière-pays.jpg"
+            },
+            {
+                "nom": "Bain de sable thérapeutique (en été)",
+                "type": "Bien-être",
+                "budget_estime": 150,
+                "devise": "MAD",
+                "description": "Pendant les mois les plus chauds (juillet/août), expérimentez un bain de sable, une pratique traditionnelle réputée pour soulager les rhumatismes.",
+                "duree_estimee": "30 minutes (bain) + repos",
+                "image_url": "planner/images/activities/Bain de sable thérapeutique (en été).jpg"
+            }
+        ]
+    }
+]

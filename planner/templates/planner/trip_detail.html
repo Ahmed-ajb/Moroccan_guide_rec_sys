@@ -1,0 +1,84 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title|default:"Détails du Voyage" }}{% endblock %}
+
+{% block content %}
+    <p class="breadcrumbs"><a href="{% url 'planner:my_trips' %}">← Retour à Mes Voyages</a></p>
+    <h2 class="section-title" id="trip-detail-title"><span>{{ trip.name }}</span></h2>
+    <style> /* Style spécifique pour ce titre pour qu'il ne soit pas centré */
+        #trip-detail-title { text-align: left; padding-bottom:10px; }
+        #trip-detail-title::before,
+        #trip-detail-title::after { left: 0; transform: translateX(0); }
+        #trip-detail-title span { padding-left:0; background-color: var(--white-pure); }
+    </style>
+
+    <div class="trip-meta-details">
+        <p><strong>Créé le :</strong> {{ trip.created_at|date:"d F Y" }}</p>
+        {% if trip.ordered_cities_json %}
+            <p><strong>Itinéraire des villes :</strong> {{ trip.ordered_cities_json|join:" → " }}</p>
+        {% endif %}
+        <p><small>ID Voyage : {{ trip.id }}</small></p>
+    </div>
+    <hr class="section-divider">
+
+    {% if days_with_items %}
+        {% for day_info in days_with_items %}
+            <details class="daily-plan-details" {% if forloop.first %}open{% endif %}>
+                <summary>
+                    Jour {{ day_info.day_obj.day_number }} {% if day_info.day_obj.city_name %}({{ day_info.day_obj.city_name }}){% endif %}
+                </summary>
+                <div class="details-content">
+                    {% if day_info.items %}
+                        <ul class="daily-items-list">
+                            {% for item_data in day_info.items %}
+                                {% with item=item_data.db_item %}
+                                <li class="daily-item">
+                                    <div class="item-header">
+                                        <span class="item-order">{{ item.order_in_day }}.</span>
+                                        <strong class="item-name">{{ item.name }}</strong>
+                                        <span class="item-type-badge">({{ item.get_item_type_display }})</span>
+                                    </div>
+                                    <div class="item-body">
+                                        {% if item.description %}<p class="item-description"><em>{{ item.description|truncatewords:30 }}</em></p>{% endif %}
+                                        <ul class="item-specs">
+                                            {% if item.item_type == 'hotel' %}
+                                                {% if item.price_per_night %}<li>Prix/nuit: {{ item.price_per_night|floatformat:0 }} MAD</li>{% endif %}
+                                                {% if item.rating_general %}<li>Note Booking/Gén.: {{ item.rating_general }}</li>{% endif %}
+                                            {% elif item.item_type == 'activity' %}
+                                                {% if item.budget_estime %}<li>Budget estimé: {{ item.budget_estime|floatformat:0 }} MAD</li>{% endif %}
+                                                {% if item.activity_type_name %}<li>Type: {{ item.activity_type_name }}</li>{% endif %}
+                                                {% if item.duree_estimee %}<li>Durée: {{ item.duree_estimee }}</li>{% endif %}
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                    <div class="item-rating-section">
+                                    {% if item_data.user_has_rated %}
+                                        <span class="user-rating-display">⭐ Votre note : {{ item_data.user_rating }}/5.</span>
+                                        <a href="{% url 'planner:rate_item' item.id %}" class="btn-edit-rating">Modifier</a>
+                                    {% else %}
+                                        <a href="{% url 'planner:rate_item' item.id %}" class="btn btn-small btn-outline">Noter cet élément</a>
+                                    {% endif %}
+                                    </div>
+                                </li>
+                                {% endwith %}
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>Rien de spécifique planifié pour ce jour.</p>
+                    {% endif %}
+                </div>
+            </details>
+        {% endfor %}
+    {% else %}
+        <p class="no-activities" style="text-align:left;">Ce voyage ne contient pas encore de planning journalier détaillé.</p>
+    {% endif %}
+
+    {% if folium_map_for_saved_trip %}
+    <hr class="section-divider">
+    <h3>🗺️ Carte de ce Voyage</h3>
+    <div class="map-container">
+        {{ folium_map_for_saved_trip|safe }}
+    </div>
+    {% endif %}
+{% endblock %}

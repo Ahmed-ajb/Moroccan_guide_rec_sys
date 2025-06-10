@@ -1,0 +1,35 @@
+{% extends "planner/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title|default:"Mes Voyages Sauvegardés" }}{% endblock %}
+
+{% block content %}
+    <h2 class="section-title"><span>{{ page_title|default:"Mes Voyages Sauvegardés" }}</span></h2>
+
+    {% if user_trips %}
+        <div class="trip-list">
+            {% for trip in user_trips %}
+                <div class="trip-item">
+                    <h3><a href="{% url 'planner:trip_detail' trip.id %}">{{ trip.name }}</a></h3>
+                    <p class="trip-meta">
+                        <strong>Créé le :</strong> {{ trip.created_at|date:"d F Y, H:i" }}<br>
+                        {% if trip.ordered_cities_json %}
+                        <strong>Villes :</strong> {{ trip.ordered_cities_json|join:" → " }}
+                        {% endif %}
+                    </p>
+                    <a href="{% url 'planner:trip_detail' trip.id %}" class="btn btn-primary btn-small">Voir Détails</a>
+                </div>
+            {% empty %}
+                 <div class="no-activities" style="text-align:left; padding: 1em 0;">
+                    <p>Vous n'avez pas encore de voyages sauvegardés.</p>
+                    <p><a href="{% url 'planner:plan_trip' %}" class="btn btn-cta" style="font-size:1em; padding: 12px 25px;">Planifiez votre premier voyage !</a></p>
+                 </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="no-activities" style="text-align:left; padding: 1em 0;">
+            <p>Vous n'avez pas encore de voyages sauvegardés.</p>
+            <p><a href="{% url 'planner:plan_trip' %}" class="btn btn-cta" style="font-size:1em; padding: 12px 25px;">Planifiez votre premier voyage !</a></p>
+        </div>
+    {% endif %}
+{% endblock %}

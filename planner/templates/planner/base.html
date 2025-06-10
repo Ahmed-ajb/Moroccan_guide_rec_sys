@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Planificateur de Voyage Maroc{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'planner/style.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header class="main-header">
+        <h1><a href="{% url 'planner:home_showcase' %}">Planificateur de Voyage Marocain</a></h1>
+    </header>
+    <nav class="main-nav">
+        <a href="{% url 'planner:home_showcase' %}" {% if request.resolver_match.url_name == 'home_showcase' %}class="active"{% endif %}>Accueil</a>
+        <a href="{% url 'planner:plan_trip' %}" {% if request.resolver_match.url_name == 'plan_trip' %}class="active"{% endif %}>Planifier</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'planner:my_trips' %}" {% if request.resolver_match.url_name == 'my_trips' or request.resolver_match.url_name == 'trip_detail' or request.resolver_match.url_name == 'rate_item' %}class="active"{% endif %}>Mes Voyages</a>
+            <span class="user-greeting">| Bonjour, {{ user.first_name|default:user.username }} !</span>
+            <a href="{% url 'password_change' %}">Changer MDP</a>
+            <form method="post" action="{% url 'logout' %}" class="logout-form-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn-link-style">Déconnexion</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}?next={{ request.get_full_path|urlencode }}" {% if request.resolver_match.url_name == 'login' %}class="active"{% endif %}>Connexion</a>
+            <a href="{% url 'planner:signup' %}" {% if request.resolver_match.url_name == 'signup' %}class="active"{% endif %}>Inscription</a>
+        {% endif %}
+    </nav>
+
+    {% if request.resolver_match.url_name != 'home_showcase' %}
+    <div class="container">
+    {% endif %}
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|safe }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% block content %}
+        <!-- Le contenu spécifique de chaque page sera inséré ici -->
+        {% endblock %}
+
+    {% if request.resolver_match.url_name != 'home_showcase' %}
+    </div> <!-- Fermeture du .container -->
+    {% endif %}
+
+
+    <footer class="main-footer">
+        <p>© {% now "Y" %} - Votre Aventure Marocaine. Tous droits réservés.</p>
+        <p><a href="#">Mentions Légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
